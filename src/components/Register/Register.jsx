@@ -97,7 +97,7 @@ const Register = ({ setModal }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (!expresiones.telefono.test(datos.phone) && !expresiones.correo.test(datos.mail) && !expresiones.nombre.test(datos.name) && !expresiones.nombre.test(datos.last_name) && !expresiones.password.test(datos.password)) {
-            setMsgError({ ...msgError, mail: true, phone: true, name: true, last_name: true, password: true })
+            setMsgError({ ...msgError, mail: true, phone: true, name: true, last_name: true, password: true, province: true, checkbox: true })
         } else if (!expresiones.correo.test(datos.mail)) {
             setMsgError({ ...msgError, mail: true })
         } else if (!expresiones.telefono.test(datos.phone)) {
@@ -109,8 +109,9 @@ const Register = ({ setModal }) => {
         } else if (!expresiones.password.test(datos.password)) {
             setMsgError({ ...msgError, password: true })
         } else if (msgError.checkbox) {
-            console.log('entre aca')
             setMsgError({ ...msgError, checkbox: true })
+        } else if (msgError.province) {
+            setMsgError({ ...msgError, province: true })
         }
         else {
             console.log('entro aca')
