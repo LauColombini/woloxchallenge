@@ -1,0 +1,18 @@
+@import "./navbar";
+@import "./section1";
+@import "./siguenos";
+@import "./beneficios";
+@import "./footer";
+@import "./register";
+@import "./listado";
+@import "./todo";
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&family=Montserrat&display=swap");
+* {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}

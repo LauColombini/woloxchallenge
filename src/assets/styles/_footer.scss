@@ -1,0 +1,55 @@
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("../Backgrounds/Bg_Header.png");
+  height: 300px;
+  @media (max-width: 768px) {
+    height: 300px;
+  }
+  .textAndButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    margin-top: 50px;
+    user-select: none;
+    @media (max-width: 768px) {
+      text-align: center;
+    }
+    h2 {
+      margin: 0 0 10px 0;
+      span {
+        color: #1e90c4;
+      }
+    }
+    button {
+      margin-top: 30px;
+      width: 175px;
+      height: 40px;
+      border-radius: 25px;
+      background-color: rgb(74, 159, 170);
+      border: 1px solid rgb(74, 159, 170);
+      color: white;
+      font-weight: 900;
+      font-family: "Montserrat", sans-serif;
+      outline: none;
+      @media (max-width: 768px) {
+        margin-bottom: 15px;
+      }
+    }
+    button:hover {
+      transition: all 0.5s;
+      background-color: rgba(74, 159, 170, 0);
+      border: 1px solid #9fc739;
+      color: #1e90c4;
+    }
+  }
+  img {
+    user-select: none;
+    width: 60px;
+    margin-bottom: 10px;
+  }
+}

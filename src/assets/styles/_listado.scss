@@ -1,0 +1,135 @@
+.listadoContainer {
+  background-image: url("../Backgrounds/Bg_Header.png");
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 50px;
+  .listCard {
+    border-radius: 10px;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+    box-shadow: 1px 1px 5px 0px rgba(50, 50, 50, 0.75);
+    background-color: white;
+    border-radius: 20px;
+    margin: 30px 40px 0 40px;
+    width: 280px;
+    height: 350px;
+    text-align: center;
+    padding: 8px;
+    padding-top: 20px;
+    min-width: 280px;
+
+    .firstView {
+      border-radius: 10px;
+      backface-visibility: hidden;
+      overflow: hidden;
+      color: #000;
+      font-family: "Montserrat", sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      transform: rotateY(0deg);
+      backface-visibility: hidden;
+      background-size: cover;
+      transition: 0.5s;
+
+      img {
+        max-width: 250px;
+        margin-top: 10px;
+      }
+    }
+    .secondView {
+      border-radius: 10px;
+      backface-visibility: hidden;
+      overflow: hidden;
+      background: #fafafa;
+      color: #333;
+      text-align: center;
+      transform: rotateY(180deg);
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #00172e;
+      backface-visibility: hidden;
+      transform: rotateY(180deg);
+      transition: 0.5s;
+      color: #ffffff;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 12px;
+      img {
+        max-width: 100px;
+        margin-bottom: 10px;
+      }
+      span {
+        font-family: "Montserrat", sans-serif;
+        margin: 3px;
+      }
+      button {
+        width: 100px;
+        height: 40px;
+        border-radius: 25px;
+        background-color: rgba(255, 255, 255, 0.13);
+        border: 1px solid rgb(74, 159, 170);
+        color: rgb(74, 159, 170);
+        font-weight: 900;
+        font-family: "Montserrat", sans-serif;
+        outline: none;
+        margin-top: 10px;
+      }
+    }
+  }
+  .listCard:hover {
+    transform: rotateY(180deg);
+  }
+}
+.inputListado {
+  width: 100%;
+  height: 100px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0 0 0;
+  input {
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    outline: none;
+    border-radius: 50px;
+    background-color: rgba(240, 238, 238, 0.493);
+    border: 1px solid rgb(74, 159, 170);
+    width: 50%;
+    height: 50px;
+  }
+  button {
+    width: 100px;
+    height: 40px;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.13);
+    border: 1px solid rgb(74, 159, 170);
+    color: rgb(74, 159, 170);
+    font-weight: 900;
+    font-family: "Montserrat", sans-serif;
+    outline: none;
+    margin-top: 10px;
+  }
+}
+.spinnerListado {
+  background-image: url("../Backgrounds/Bg_Header.png");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  img {
+    width: 250px;
+  }
+}

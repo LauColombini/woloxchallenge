@@ -1,0 +1,67 @@
+.beneficiosContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  user-select: none;
+  .title {
+    user-select: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: 30px;
+    margin-bottom: 50px;
+    span {
+      color: #1e90c4;
+    }
+    @media (max-width: 768px) {
+      text-align: center;
+    }
+  }
+  .beneficios {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 50px;
+    user-select: none;
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      span {
+        user-select: none;
+        font-family: "Montserrat", sans-serif;
+        margin-top: 20px;
+        max-width: 120px;
+        height: 54px;
+        text-align: center;
+        font-weight: 500;
+        @media (max-width: 768px) {
+          margin-bottom: 40px;
+        }
+      }
+      .laptop67px {
+        padding-top: 13px;
+      }
+    }
+  }
+
+  hr {
+    border: none;
+    height: 20px;
+    width: 90%;
+    height: 50px;
+    margin-top: 0;
+    border-bottom: 1px solid #cdf7f75e;
+    box-shadow: 10px 20px 15px -20px rgba(51, 51, 51, 0.137);
+    margin: -50px auto 10px;
+  }
+}
