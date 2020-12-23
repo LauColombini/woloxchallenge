@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 
 // eslint-disable-next-line react/prop-types
 const Register = ({ setModal }) => {
     const [checkbox, setCheckbox] = useState(false)
+    //const token = localStorage.getItem('token')
     const [msgError, setMsgError] = useState({
         name: false,
         last_name: false,
@@ -27,7 +28,7 @@ const Register = ({ setModal }) => {
         province: '',
         password: ''
     })
-
+    const history = useHistory();
     const expresiones = {
         nombre: /^[a-zA-ZÀ-ÿ\s]{1,30}$/,
         password: /^.{6,12}$/,
@@ -115,7 +116,7 @@ const Register = ({ setModal }) => {
             console.log('entro aca')
             axios.post("https://private-anon-1ad05c16c7-woloxfrontendinverview.apiary-mock.com/signup", datos)
                 .then((res) => localStorage.setItem('token', res.data.token))
-            setModal(false)
+                .then(() => { setModal(false); history.push('/listado') })
         }
     }
 
