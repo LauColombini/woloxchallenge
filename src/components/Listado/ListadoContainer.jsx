@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { useHistory } from 'react-router-dom'
 import { fetchList } from '../../redux/action-creators/listado'
 import spinner from '../../assets/spinner.gif'
 
@@ -12,13 +13,24 @@ const ListadoContainer = () => {
     const [searchTech, setSearchTech] = useState("")
     const [newArrTech, setNewArrTech] = useState(list)
     const [sort, setSort] = useState(true)
+    const [token, setToken] = useState('')
+    const history = useHistory();
     const dispatch = useDispatch()
+    useEffect(() => {
+        const tokenL = localStorage.getItem("token");
+        console.log(tokenL)
+        if (!tokenL) history.push('/')
+        else setToken(tokenL)
+    }, [token])
+
     useEffect(() => {
         dispatch(fetchList())
     }, [])
+
+
+
     useEffect(() => {
         localStorage.setItem('techFavs', JSON.stringify(favsTechs))
-
     }, [favsTechs])
 
     useEffect(() => {
@@ -69,17 +81,18 @@ const ListadoContainer = () => {
         setSort(sort => !sort)
     }
 
-    console.log(favsTechs)
-
 
     return (
         <>
-            {list.length ?
+            {token && list.length ?
                 <Listado handleSortAsc={handleSortAsc} handleSortDes={handleSortDes} favsTechs={favsTechs} list={list} handleSearch={handleSearch} handleClickFav={handleClickFav} newArrTech={newArrTech} />
                 : <div className='spinnerListado'>
                     <img src={spinner} />
                 </div>
             }
+
+
+
         </>
     )
 }
