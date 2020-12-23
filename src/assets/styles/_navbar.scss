@@ -1,0 +1,73 @@
+.NavbarContainer {
+  background-image: url("../Backgrounds/Bg_Header.png");
+  height: 150px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  user-select: none;
+  .Navbar {
+    margin: 60px 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  img {
+    width: 200px;
+    user-select: none;
+  }
+  .NavbarMenu {
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    @media (max-width: 768px) {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+    }
+    .navbarLink {
+      text-decoration: none;
+      color: black;
+    }
+    span {
+      font-weight: 900;
+      font-family: "Montserrat", sans-serif;
+      user-select: none;
+      margin-right: 50px;
+      @media (max-width: 768px) {
+        margin-left: 50px;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+    }
+    span:hover {
+      transition: all 0.5s;
+      color: rgb(74, 159, 170);
+    }
+
+    button {
+      width: 175px;
+      height: 40px;
+      border-radius: 25px;
+      background-color: white;
+      border: 1px solid rgb(74, 159, 170);
+      color: rgb(74, 159, 170);
+      font-weight: 900;
+      font-family: "Montserrat", sans-serif;
+      outline: none;
+    }
+    button:hover {
+      transition: all 0.5s;
+      color: #9fc739;
+      border: 1px solid #9fc739;
+    }
+  }
+}
